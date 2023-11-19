@@ -1,0 +1,41 @@
+body{
+  margin: 0;
+  font-family: sans-serif;
+}
+
+summary{
+  all: unset; /* remove todos os estilos definidos anteriormente para o elemento e seus descendentes. */
+  padding: 16px;
+  color: rgb(255 255 255);
+  background-color: rgb(132, 40, 40);
+  width: 174px;
+  cursor: pointer;
+}
+
+details{
+  display: flex;
+  margin:  auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 206px;
+  background-color: rgb(12, 12, 14);
+  color: white;
+
+}
+
+ul{
+  padding-bottom: 16px;
+  font-size: 0.8rem;
+}
+
+li + li{
+  margin-top: 0.8rem;
+}
+
+.center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+}
