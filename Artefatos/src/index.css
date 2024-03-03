@@ -8,20 +8,47 @@
   letter-spacing: 1px;
 }
 
+
 body {
-  height: 100vh;
+  /* height: 90vh; */
   background-color: #1e1e1e;
   display: grid;
   place-items: center;
   font-family: "Kanit", sans-serif;
+  /* scrollbar */
+  --sb-track-color: #ffffff;
+  --sb-thumb-color: #344e41;
+  --sb-size: 4px;
 }
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
 
 .h1 {
   position: relative;
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 3px;
-  line-height: 80px;
+  /* line-height: 80px; */
   cursor: pointer;
   margin-bottom: 15px;
   margin-top: 15px;
@@ -650,6 +677,18 @@ footer {
 }
 
 @media screen and (max-width: 426px) {
+
+  .h1{
+    font-size: 1.5rem;
+  }
+  .card_1 {
+    width: 65%;
+    margin-top: 10px;
+  }
+  .card_2{
+    width: 65%;
+    height: 110%;
+  }
   #footer_content {
     grid-template-columns: repeat(1, 1fr);
     padding: 3rem 2rem;
